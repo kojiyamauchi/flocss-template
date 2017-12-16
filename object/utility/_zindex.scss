@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/*==============================================================================
+
+ Z-index SCSS.
+
+  Design Concept
+ ・FLOCCS
+  => https://github.com/hiloki/flocss
+
+==============================================================================*/
+$zindex: ( element3: 2000, element2: 1000, element1: -1000 );
+
+.u-zindex3 {
+  z-index: map-get($zindex, element3);
+}
+
+.u-zindex2 {
+  z-index: map-get($zindex, element2);
+}
+
+.u-zindex1 {
+  z-index: map-get($zindex, element1);
+}

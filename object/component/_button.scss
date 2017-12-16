@@ -1,0 +1,87 @@
+@charset "UTF-8";
+/*==============================================================================
+
+ Button SCSS.
+
+ Design Concept
+・FLOCCS
+ => https://github.com/hiloki/flocss
+
+ Naming Conventions
+ ・Prefix
+  => c-
+ ・Block
+  => .c-button {}
+ ・Block - Element
+  => .c-button__bold {}
+ ・Block - Modifier
+  => .c-button--primary {}
+
+ Usage
+  <button class="c-button c-button__bold c-button--default c-button--lg">
+  Sample
+  </button>
+
+==============================================================================*/
+/* Base. */
+.c-button {
+  display: inline-block;
+  text-align: center;
+  font-size: 1em;
+  white-space: nowrap;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  padding: 6px 12px;
+  opacity: 1;
+  transition: opacity 0.5s;
+
+  &:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    transition: opacity 0.5s;
+  }
+  // Element.
+  &__bold {
+    font-weight: bold;
+  }
+
+  &__lighter {
+    font-weight: lighter;
+  }
+
+  &__italic {
+    font-style: italic;
+  }
+  // Modifier.
+  &--default {
+    color: #555;
+    background-color: #fff;
+    border-color: #555;
+  }
+
+  &--primary {
+    color: #555;
+    background-color: #eee;
+  }
+
+  &--lg {
+    padding: 10px 16px;
+  }
+
+  &--sm {
+    padding: 5px 10px;
+  }
+
+  &--xs {
+    padding: 1px 5px;
+  }
+
+  &--circle {
+    border-radius: 100%;
+  }
+
+  &--block {
+    display: block;
+    width: 100%;
+  }
+}

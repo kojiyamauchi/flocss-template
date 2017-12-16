@@ -1,0 +1,64 @@
+@charset "UTF-8";
+/*==============================================================================
+
+ Fonts SCSS.
+
+ Design Concept
+・FLOCCS
+ => https://github.com/hiloki/flocss
+
+ Naming Conventions
+ ・Prefix
+  => u-
+ ・Block
+  => .u-heading {}
+ ・Block - Element
+  => .u-heading__bold {}
+ ・Block - Modifier
+  => .u-heading--level01 {}
+
+ Usage
+  <input class="u-heading u-heading__bold u-heading--level01">
+
+==============================================================================*/
+/* Base. */
+.u-heading {
+  text-align: center;
+  letter-spacing: 0.01em;
+  // Element.
+  &__bold {
+    font-weight: bold;
+  }
+
+  &__lighter {
+    font-weight: lighter;
+  }
+
+  &__italic {
+    font-style: italic;
+  }
+  // Modifier.
+  &--level01 {
+    font-size: 2.25rem;
+  }
+
+  &--level02 {
+    font-size: 2rem;
+  }
+
+  &--level03 {
+    font-size: 1.75rem;
+  }
+
+  &--level04 {
+    font-size: 1.5rem;
+  }
+
+  &--level05 {
+    font-size: 1.25rem;
+  }
+
+  &--level06 {
+    font-size: 1rem;
+  }
+}

@@ -1,0 +1,76 @@
+@charset "UTF-8";
+/*==============================================================================
+
+ Form SCSS.
+
+ Design Concept
+・FLOCCS
+ => https://github.com/hiloki/flocss
+
+ Naming Conventions
+ ・Prefix
+  => c-
+ ・Block
+  => .c-input {}
+ ・Block - Element
+  => .c-input__bold {}
+ ・Block - Modifier
+  => .c-button--inline {}
+
+ Usage
+  <input class="c-input c-input__bold c-input-inline">
+
+==============================================================================*/
+/* Base. */
+.c-input {
+  display: block;
+  width: 100%;
+  height: 40px;
+  border: solid 2px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  padding: 0 5px;
+  // Element.
+  &__bold {
+    font-weight: bold;
+  }
+
+  &__lighter {
+    font-weight: lighter;
+  }
+
+  &__italic {
+    font-style: italic;
+  }
+  // Modifier.
+  &--inline {
+    display: inline-block;
+    width: auto;
+  }
+}
+/* Base. */
+.c-textarea {
+  display: block;
+  width: 100%;
+  height: 140px;
+  border: solid 2px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  padding: 5px;
+  resize: vertical;
+  // Element.
+  &__bold {
+    font-weight: bold;
+  }
+
+  &__lighter {
+    font-weight: lighter;
+  }
+
+  &__italic {
+    font-style: italic;
+  }
+  // Modifier.
+  &--inline {
+    display: inline-block;
+    width: auto;
+  }
+}

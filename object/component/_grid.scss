@@ -1,0 +1,190 @@
+@charset "UTF-8";
+@import '../../foundation/mixins';
+/*==============================================================================
+
+ Grid SCSS.
+
+ Design Concept
+・FLOCCS
+ => https://github.com/hiloki/flocss
+
+ Usage
+ This Grid System 12column.
+ ・Grid Layout Wrap Added Class.
+  => All / 'c-grid-box-all'
+  => Desktop / 'c-grid-box-pc'
+  => Tablet / 'c-grid-box-tab'
+  => Mobile / 'c-grid-box-sp'
+  => Add Grid Margin / Side -> 'is-pd**' Bottom -> 'is-mgb**'
+  ・Grid Components Added Class. Add a number less than 12 at the end.
+  => All / 'c-gird-all-*'
+  => Desktop / 'c-grid-pc-*'
+  => Tablet / 'c-grid-tab-*'
+  => Mobile / 'c0grid-sp-*'
+
+  Example.
+  <div class="c-grid-box-pc c-grid-box-tab c-grid-box-sp is-pd10 is-mgb10">
+  <div class="c-grid-pc-3 c-grid-tab-3 c-grid-sp-6"></div>
+  <div class="c-grid-pc-3 c-grid-tab-3 c-grid-sp-6"></div>
+  <div class="c-grid-pc-3 c-grid-tab-3 c-grid-sp-6"></div>
+  <div class="c-grid-pc-3 c-grid-tab-3 c-grid-sp-6"></div>
+  </div>
+
+  ・This component is If concatenate class name, using kebab-case only.
+
+==============================================================================*/
+/* Core Mixins */
+@mixin grid($device...) {
+  font-size: 0;
+
+  > * {
+    font-size: 14px;
+  }
+
+  > [class*="c-grid-"] {
+    display: inline-block;
+    vertical-align: top;
+
+    &.is-right {
+      text-align: right;
+    }
+  }
+
+  &.is-middle {
+    > [class*="c-grid-"] {
+      vertical-align: middle;
+    }
+  }
+
+  &.is-fl-right {
+    @include clearfix;
+
+    > [class*="c-grid-"] {
+      float: right;
+    }
+  }
+
+  &.is-pd10 {
+    margin-left: -5px;
+    margin-right: -5px;
+
+    > [class*="c-grid-"] {
+      padding-left: 5px;
+      padding-right: 5px;
+    }
+  }
+
+  &.is-mgb10 {
+    > [class*="c-grid-"] {
+      margin-bottom: 10px;
+    }
+  }
+
+  &.is-pd15 {
+    margin-left: -7.5px;
+    margin-right: -7.5px;
+
+    > [class*="c-grid-"] {
+      padding-left: 7.5px;
+      padding-right: 7.5px;
+    }
+  }
+
+  &.is-mgb15 {
+    > [class*="c-grid-"] {
+      margin-bottom: 15px;
+    }
+  }
+
+  &.is-pd20 {
+    margin-left: -10px;
+    margin-right: -10px;
+
+    > [class*="c-grid-"] {
+      padding-left: 10px;
+      padding-right: 10px;
+    }
+  }
+
+  &.is-mgb20 {
+    > [class*="c-grid-"] {
+      margin-bottom: 20px;
+    }
+  }
+
+  &.is-pd30 {
+    margin-left: -15px;
+    margin-right: -15px;
+
+    > [class*="c-grid-"] {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  &.is-mgb30 {
+    > [class*="c-grid-"] {
+      margin-bottom: 30px;
+    }
+  }
+
+  &.is-pd8 {
+    margin-left: -4px;
+    margin-right: -4px;
+
+    > [class*="c-grid-"] {
+      padding-left: 4px;
+      padding-right: 4px;
+    }
+  }
+
+  &.is-mgb8 {
+    > [class*="c-gird-"] {
+      margin-bottom: 8px;
+    }
+  }
+
+  &.is-pd16 {
+    margin-left: -8px;
+    margin-right: -8px;
+
+    > [class*="c-grid-"] {
+      padding-left: 8px;
+      padding-right: 8px;
+    }
+  }
+
+  &.is-mgb16 {
+    > [class*="c-grid-"] {
+      margin-bottom: 16px;
+    }
+  }
+  $maxCol: 12;
+  @for $i from 1 through $maxCol {
+    > .c-grid-#{$device}-#{$i} {
+      width: 100% / ($maxCol / $i);
+    }
+  }
+}
+/* Grid Layout Warp */
+.c-grid-box-all {
+  @include grid(all);
+}
+
+.c-grid-box-pc {
+  @include desktop {
+    @include grid(pc);
+  }
+}
+
+.c-grid-box-tab {
+  @include tablet {
+    @include grid(tab);
+  }
+}
+
+.c-grid-box-sp {
+  @include mobile {
+    @include grid(sp);
+  }
+}

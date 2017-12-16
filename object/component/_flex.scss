@@ -1,0 +1,57 @@
+@charset "UTF-8";
+@import '../../foundation/mixins';
+/*==============================================================================
+
+ FlexBox SCSS.
+
+ Design Concept
+・FLOCCS
+ => https://github.com/hiloki/flocss
+
+ Usage
+ Calculate in 12columns.
+ Don't using on multiple lines.
+ ・FlexBox Component Wrap. Added Class.
+  => 'c-flex-component'
+  ・Flex Components Added Class. Add a number less than 12 at the end.
+  => 'c-flex-col-*'
+
+  Example.
+  <div class="c-flex-component">
+  <div class="c-flex-col-3"></div>
+  <div class="c-flex-col-3"></div>
+  <div class="c-flex-col-3"></div>
+  <div class="c-flex-col-3"></div>
+  </div>
+
+  ・This component is If concatenate class name, using kebab-case only.
+
+==============================================================================*/
+.c-flex-component {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: space-between;
+
+  [class*="c-flex-col-"] {
+    border: solid 1px #eee;
+  }
+  $maxCol: 12;
+  @for $i from 1 through $maxCol {
+    .c-flex-col-#{$i} {
+      $no: ($maxCol / $i);
+      $width: 100% / $no;
+      $marginM: 16px * ($no - 1);
+      $marginL: 20px * ($no - 1);
+      $minusMarginM: $marginM / $no;
+      $minusMarginL: $marginL / $no;
+      @if($i > 3) {
+        width: calc(#{$width} - #{$minusMarginL});
+        margin-bottom: 20px;
+      } @else {
+        width: calc(#{$width} - #{$minusMarginM});
+        margin-bottom: 16px;
+      }
+    }
+  }
+}
