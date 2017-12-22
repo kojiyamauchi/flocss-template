@@ -24,10 +24,18 @@
 
   Example.
   <div class="c-grid-box-pc c-grid-box-tab c-grid-box-sp is-pd10 is-mgb10">
-  <div class="c-grid-pc-3 c-grid-tab-3 c-grid-sp-6"></div>
-  <div class="c-grid-pc-3 c-grid-tab-3 c-grid-sp-6"></div>
-  <div class="c-grid-pc-3 c-grid-tab-3 c-grid-sp-6"></div>
-  <div class="c-grid-pc-3 c-grid-tab-3 c-grid-sp-6"></div>
+    <div class="c-grid-pc-3 c-grid-tab-3 c-grid-sp-6">
+      <div class="l-inner__component"></div>
+    </div>
+    <div class="c-grid-pc-3 c-grid-tab-3 c-grid-sp-6">
+      <div class="l-inner__component"></div>
+    </div>
+    <div class="c-grid-pc-3 c-grid-tab-3 c-grid-sp-6">
+      <div class="l-inner__component"></div>
+    </div>
+    <div class="c-grid-pc-3 c-grid-tab-3 c-grid-sp-6">
+      <div class="l-inner__component"></div>
+    </div>
   </div>
 
   ・This component is If concatenate class name, using kebab-case only.

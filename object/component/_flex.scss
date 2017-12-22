@@ -18,10 +18,18 @@
 
   Example.
   <div class="c-flex-component">
-  <div class="c-flex-col-3"></div>
-  <div class="c-flex-col-3"></div>
-  <div class="c-flex-col-3"></div>
-  <div class="c-flex-col-3"></div>
+    <div class="c-flex-col-3">
+      <div class="l-inner__component"></div>
+    </div>
+    <div class="c-flex-col-3">
+      <div class="l-inner__component"></div>
+    </div>
+    <div class="c-flex-col-3">
+      <div class="l-inner__component"></div>
+    </div>
+    <div class="c-flex-col-3">
+      <div class="l-inner__component"></div>
+    </div>
   </div>
 
   ・This component is If concatenate class name, using kebab-case only.
