@@ -179,20 +179,18 @@
   @include grid(all);
 }
 
-.c-grid-box-pc {
-  @include desktop {
-    @include grid(pc);
-  }
+.c-grid-box-sp {
+  @include grid(sp);
 }
 
 .c-grid-box-tab {
-  @include tablet {
+  @include largeMobile {
     @include grid(tab);
   }
 }
 
-.c-grid-box-sp {
-  @include mobile {
-    @include grid(sp);
+.c-grid-box-pc {
+  @include tablet {
+    @include grid(pc);
   }
 }

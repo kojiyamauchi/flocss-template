@@ -18,85 +18,85 @@
   <div class="u-pc"></div>
 
 ==============================================================================*/
-/* over 769px */
+/* under 769px */
 .u-pc {
-  display: block;
+  display: none;
 }
 
 .u-inline-block-pc {
-  display: inline-block;
+  display: none;
 }
 
 .u-inline-pc {
-  display: inline;
+  display: none;
 }
 
 .u-flex-pc {
-  display: flex;
+  display: none;
 }
 
 .u-inline-flex-pc {
-  display: inline-flex;
+  display: none;
 }
 
 .u-sp {
-  display: none;
+  display: block;
 }
 
 .u-inline-block-sp {
-  display: none;
+  display: inline-block;
 }
 
 .u-inline-sp {
-  display: none;
+  display: inline;
 }
 
 .u-flex-sp {
-  display: none;
+  display: flex;
 }
 
 .u-inline-flex-sp {
-  display: none;
+  display: inline-flex;
 }
-/* under 768px */
-@include tablet {
+/* over 768px */
+@include largeMobile {
   .u-pc {
-    display: none;
-  }
-
-  .u-inline-block-pc {
-    display: none;
-  }
-
-  .u-inline-pc {
-    display: none;
-  }
-
-  .u-flex-pc {
-    display: none;
-  }
-
-  .u-inline-flex-pc {
-    display: none;
-  }
-
-  .u-sp {
     display: block;
   }
 
-  .u-inline-block-sp {
+  .u-inline-block-pc {
     display: inline-block;
   }
 
-  .u-inline-sp {
+  .u-inline-pc {
     display: inline;
   }
 
-  .u-flex-sp {
+  .u-flex-pc {
     display: flex;
   }
 
-  .u-inline-flex-sp {
+  .u-inline-flex-pc {
     display: inline-flex;
+  }
+
+  .u-sp {
+    display: none;
+  }
+
+  .u-inline-block-sp {
+    display: none;
+  }
+
+  .u-inline-sp {
+    display: none;
+  }
+
+  .u-flex-sp {
+    display: none;
+  }
+
+  .u-inline-flex-sp {
+    display: none;
   }
 }

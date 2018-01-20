@@ -10,28 +10,28 @@
 
 ==============================================================================*/
 // BreakPoints
-@mixin largeDesktop {
-   @media (min-width: #{$largeDesktopWidth}){
-    @content;
-  }
-}
-@mixin desktop {
-   @media (min-width: #{$desktopWidth}){
-    @content;
-  }
-}
-@mixin tablet {
-   @media (max-width: #{$tabletWidth}){
+@mixin mobile {
+  @media (min-width: #{$mobileWidth}) {
     @content;
   }
 }
 @mixin largeMobile {
-   @media (max-width: #{$largeMobileWidth}){
+  @media (min-width: #{$largeMobileWidth}) {
     @content;
   }
 }
-@mixin mobile {
-   @media (max-width: #{$mobileWidth}){
+@mixin tablet {
+  @media (min-width: #{$tabletWidth}) {
+    @content;
+  }
+}
+@mixin desktop {
+  @media (min-width: #{$desktopWidth}) {
+    @content;
+  }
+}
+@mixin largeDesktop {
+  @media (min-width: #{$largeDesktopWidth}) {
     @content;
   }
 }
