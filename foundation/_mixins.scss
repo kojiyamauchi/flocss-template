@@ -10,6 +10,11 @@
 
 ==============================================================================*/
 // BreakPoints
+@mixin smallMobile {
+  @media (min-width: #{$smallMobileWidth}) {
+    @content;
+  }
+}
 @mixin mobile {
   @media (min-width: #{$mobileWidth}) {
     @content;
