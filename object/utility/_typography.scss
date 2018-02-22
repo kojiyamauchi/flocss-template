@@ -1,24 +1,24 @@
 @charset "UTF-8";
 /*==============================================================================
 
- Fonts SCSS.
+ Typography SCSS.
 
  Design Concept
 ・FLOCCS
  => https://github.com/hiloki/flocss
 
- Naming Conventions
- ・Prefix
-  => u-
- ・Block
-  => .u-heading {}
- ・Block - Element
-  => .u-heading__bold {}
- ・Block - Modifier
-  => .u-heading--level01 {}
+  Naming Conventions.
+  ・Prefix
+   => u-
+  ・Block
+   => .u-heading {}
+  ・Block - Element
+   => .u-heading__bold {}
+  ・Block - Modifier
+   => .u-heading--level01 {}
 
- Usage
-  <input class="u-heading u-heading__bold u-heading--level01">
+  Usage.
+   <input class="u-heading u-heading__bold u-heading--level01">
 
 ==============================================================================*/
 /* Base. */

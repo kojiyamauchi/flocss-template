@@ -8,16 +8,31 @@
   => https://github.com/hiloki/flocss
 
 ==============================================================================*/
-$zindex: ( element3: 2000, element2: 1000, element1: -1000 );
+$z-index: ( element3: 2000, element2: 1000, element1: -1000 );
 
 .u-zindex3 {
-  z-index: map-get($zindex, element3);
+  z-index: map-get($z-index, element3);
 }
 
 .u-zindex2 {
-  z-index: map-get($zindex, element2);
+  z-index: map-get($z-index, element2);
 }
 
 .u-zindex1 {
-  z-index: map-get($zindex, element1);
+  z-index: map-get($z-index, element1);
+}
+
+$z-indexes: header, navigation, submenu, button;
+
+.header {
+  z-index: index($z-indexes, header); // z-index: 1;
+}
+.navigation {
+  z-index: index($z-indexes, navigation); // z-index: 2;
+}
+.submenu {
+  z-index: index($z-indexes, submenu); // z-index: 3;
+}
+.button {
+  z-index: index($z-indexes, button); // z-index: 4;
 }
