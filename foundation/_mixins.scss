@@ -40,6 +40,11 @@
     @content;
   }
 }
+@mixin customOrderMin($orderW) {
+  @media screen and (min-width: $orderW) {
+    @content;
+  }
+}
 // clearfix
 @mixin clearfix {
   clear: both;
