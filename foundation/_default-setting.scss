@@ -23,6 +23,7 @@ article,
 aside,
 audio,
 blockquote,
+button,
 body,
 canvas,
 caption,
@@ -56,6 +57,7 @@ p,
 pre,
 ruby,
 section,
+select,
 span,
 summary,
 table,
@@ -82,12 +84,12 @@ video {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   -ms-box-sizing: border-box;
+  overflow-wrap: break-word;
 }
 
 html {
   width: 100vw;
-  font-size: 100%;
-  overflow-x: hidden;
+  font-size: 62.5%; // Base Font Size -> 10px. / Example, When Adjusting Font Size. -> 1.6em = 16px.
 }
 
 body {
@@ -97,6 +99,7 @@ body {
   color: #555;
   letter-spacing: 0;
   line-height: 1;
+  overflow-x: hidden;
   position: relative;
   -webkit-overflow-scrolling: touch;
   -webkit-text-size-adjust: 100%;
@@ -169,12 +172,16 @@ select,
 button {
   border-radius: 0;
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 textarea {
   resize: vertical;
   border-radius: 0;
   -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 ::selection {
